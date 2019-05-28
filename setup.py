@@ -3,15 +3,16 @@ lambdata - a collection of Data Science helper functions
 """
 import setuptools
 
-REQUIRED = ["numpy", "pandas"]
+REQUIRED = ["numpy", "pandas", "cookiecutter", "black"]
 
 with open("README.md", "r") as fh:
     LONG_DESCRIPTION = fh.read()
 
 setuptools.setup(
     name="lambdata-beverast",
-    version="0.0.1",
+    version="0.0.2",
     author="beverast",
+    author_email="j.wagner1024@gmail.com",
     description="A collection of Data Science helper functions",
     long_description=LONG_DESCRIPTION,
     long_description_content_type="text/markdown",
