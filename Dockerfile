@@ -1,8 +1,11 @@
-FROM python:3.7
+FROM python:3.7.3-stretch
 
-RUN pip install pandas
-RUN pip install black
-RUN pip install cookiecutter
+# Set working dir and copy current dir into work
+WORKDIR /app
+COPY . /app
+
+# Required dependencies
+RUN pip --no-cache-dir install pandas black cookiecutter
 RUN pip install -i https://test.pypi.org/simple/ lambdata-beverast
 
-CMD ["python", "-c", "import lambdata_beverast; print('Installation Validated.')"]
+RUN python -c "import lambdata_beverast; print('Y: ', lambdata_beverast.Y)"
