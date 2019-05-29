@@ -10,7 +10,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="lambdata-beverast",
-    version="0.0.2",
+    version="0.0.3",
     author="beverast",
     author_email="j.wagner1024@gmail.com",
     description="A collection of Data Science helper functions",
