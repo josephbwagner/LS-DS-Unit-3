@@ -1,13 +1,13 @@
-'''Tracks the season perfomance of different teams and generates a
-'''
+"""Tracks the season perfomance of different teams and generates a
+"""
 from possible_values import *
 from game import Game
 from random import randint, uniform, sample
 
 
 def generate_rand_games(n=15):
-    '''Generate n random games using value lists in possible_values
-    '''
+    """Generate n random games using value lists in possible_values
+    """
     # Begin with enpty list
     games = []
 
@@ -37,13 +37,13 @@ def generate_rand_games(n=15):
 
 
 def season_report(games):
-    '''Print out a season report given a list of games
+    """Print out a season report given a list of games
 
     Parameters
     -----------------------------
     games : list
         a list of Game class instances
-    '''
+    """
     # Instantiate empty set and lists
     teams = set()
     winning_teams = []
@@ -68,10 +68,8 @@ def season_report(games):
 
     # Calculates the average points scored by winning team and losing team
     # in a game
-    winning_team_average = (winning_team_total_points /
-                            len(winning_team))
-    losing_team_average = (losing_team_total_points /
-                           len(losing_team))
+    winning_team_average = winning_team_total_points / len(winning_team)
+    losing_team_average = losing_team_total_points / len(losing_team)
 
     # Instantiate dict to keep track of individual team records
     team_records = {}
@@ -89,17 +87,17 @@ def season_report(games):
         team_records[team][1] += 1
 
     # Finally print the report
-    print('\n\n--------Football Season Report--------\n')
-    print('Team Records')
-    print('---------------------------------')
+    print("\n\n--------Football Season Report--------\n")
+    print("Team Records")
+    print("---------------------------------")
     for team, record in team_records.items():
-        print(f'{team}: {record[0]} W, {record[1]} L')
-    print('---------------------------------')
-    print(f'Average Score of Winning Team: {winning_team_average: .1f}')
-    print(f'Average Score of Losing Team: {losing_team_average:.1f}\n')
+        print(f"{team}: {record[0]} W, {record[1]} L")
+    print("---------------------------------")
+    print(f"Average Score of Winning Team: {winning_team_average: .1f}")
+    print(f"Average Score of Losing Team: {losing_team_average:.1f}\n")
 
     # You could choose to return something here if you wanted TODO
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     season_report(generate_rand_games())
