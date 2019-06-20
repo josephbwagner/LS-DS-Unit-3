@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Twitter Comparator - {{ title }}</title>
     <link rel="stylesheet" href="https://unpkg.com/picnic"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
@@ -35,7 +36,7 @@
                 {% endfor %}
           </select>
           <input type="text" name="tweet_text" placeholder="Tweet text to predict">
-          <input type="submit" value="Compare Users">
+          <input class="stack icon-paper-plane" type="submit" value="Compare Users">
         </form>
         <h3>Recent comparisons:</h3>
         {% for comparison in comparisons %}
