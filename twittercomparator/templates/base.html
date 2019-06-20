@@ -36,7 +36,7 @@
                 {% endfor %}
           </select>
           <textarea class="stack" name="tweet_text" placeholder="Tweet text to predict"></textarea>
-          <input class="stack icon-paper-plane" type="button" value="Compare Users">
+          <button class="stack icon-paper-plane" value="Compare Users">Compare Users</button>
         </form>
         <h3>Recent comparisons:</h3>
         {% for comparison in comparisons %}
@@ -50,7 +50,7 @@
         {% endfor %}
         <form action="/user" method="post">
             <input class="stack" type="text" name="user_name" placeholder="User to add">
-            <input class="stack icon-paper-plane" type="button" value="Add User">
+            <button class="stack icon-paper-plane" value="Add User">Add User</button>
         </form>
         </div>
     {% endblock %}
