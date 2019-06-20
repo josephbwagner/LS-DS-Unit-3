@@ -1,6 +1,7 @@
 """
 Main application and routing logic for Twitter-Comparator
 """
+import os
 from decouple import config
 from flask import Flask, render_template, request
 from .models import DB, User
@@ -11,7 +12,7 @@ from .twitter import add_or_update_user
 def create_app():
     """Create and configure an instance of the Flask application"""
     app = Flask(__name__)
-    app.config["SQLALCHEMY_DATABASE_URI"] = config("DATABASE_URL")
+    app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DATABASE_URL")
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     
     DB.init_app(app)
