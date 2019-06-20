@@ -25,7 +25,7 @@ def create_app():
 
     @app.route("/user", methods=["POST"])
     @app.route("/user/<name>", methods=["GET"])
-    def user(name=None):
+    def user(name=None, message=''):
         name = name or request.values["user_name"]
         try:
             if request.method == "POST":
@@ -39,7 +39,7 @@ def create_app():
 
 
     @app.route("/compare", methods=["POST"])
-    def compare():
+    def compare(message=''):
         # Consider making a one-liner with list-unpacking
         user1 = request.values['user1']
         user2 = request.values['user2']
