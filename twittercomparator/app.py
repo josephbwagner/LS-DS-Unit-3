@@ -6,7 +6,7 @@ from decouple import config
 from flask import Flask, render_template, request
 from .models import DB, User
 from .predict import predict_user
-from .twitter import add_or_update_user
+from .twitter import add_or_update_user, add_users
 
 
 def create_app():
