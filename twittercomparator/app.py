@@ -50,5 +50,12 @@ def create_app():
         else:
             prediction = predict_user(user1, user2, request.values['tweet_text'])
             return user1 if prediction else user2
-    
+
+    @app.route('/reset')
+    def reset():
+       DB.drop_all()
+       DB.create_all()
+       add_users()
+       return render_template('base.html', title='Reset database!')
+
     return app
