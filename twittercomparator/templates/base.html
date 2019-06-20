@@ -35,8 +35,8 @@
                 <option value="{{ user.name }}">{{ user.name }}</option>
                 {% endfor %}
           </select>
-          <input class="stack" type="text" name="tweet_text" placeholder="Tweet text to predict">
-          <input class="stack icon-paper-plane" type="submit" value="Compare Users">
+          <textarea class="stack" name="tweet_text" placeholder="Tweet text to predict"></textarea>
+          <input class="stack icon-paper-plane" type="button" value="Compare Users">
         </form>
         <h3>Recent comparisons:</h3>
         {% for comparison in comparisons %}
@@ -49,8 +49,8 @@
             <a href="/user/{{ user.name }}"><span class="stack">{{ user.name }}</span></a>
         {% endfor %}
         <form action="/user" method="post">
-            <input type="text" name="user_name" placeholder="User to add">
-            <input type="submit" value="Add User">
+            <input class="stack" type="text" name="user_name" placeholder="User to add">
+            <input class="stack icon-paper-plane" type="button" value="Add User">
         </form>
         </div>
     {% endblock %}
