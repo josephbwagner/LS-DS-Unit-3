@@ -14,6 +14,10 @@ TWITTER_AUTH.set_access_token(config('TWITTER_ACCESS_TOKEN'),
 TWITTER = tweepy.API(TWITTER_AUTH)
 BASILICA = basilica.Connection(config('BASILICA_KEY'))
 
+TWITTER_USERS = ['calebhicks', 'elonmusk', 'rrherr', 'SteveMartinToGo',
+                'nasa', 'sadserver', 'jkhowland', 'austen',
+                'common_squirrel', 'KenJennings', 'conanobrien',
+                'big_ben_clock', 'IAM_SHAKESPEARE']
 
 def add_or_update_user(username):
     """
