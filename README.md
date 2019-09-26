@@ -1,2 +1,2 @@
 # Twitter-Comparator
-A web application for comparing Twitter users
+https://twitter-comparator-prod.herokuapp.com/
